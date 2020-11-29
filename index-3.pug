@@ -1,0 +1,19 @@
+
+html
+    head
+        title PUG | Element and attribute
+    body
+        #form
+            input.form-input(type="password" name="password" data-js=`${5 < 2 ? "OK" : "NOT OK"}`)
+
+        - let myclass = ['class1', 'class2', 'class3'];
+        div.box(class=myclass)
+
+        - const styles = {margin: '10px', color: '#fff'}
+        .page-banner(style=styles)
+
+
+        - const attributes = {src: "images/myphoto.png", alt: 'some images'}
+        img.list-image&attributes(attributes)
+
+        input(type="text" disabled="true")
