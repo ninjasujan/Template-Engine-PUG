@@ -1,0 +1,29 @@
+html
+    head
+        title For and Each Loop
+    body
+    
+        p simple array loop
+
+        each num, index in [1, 2, 3, 4, 5]
+            p= num + 'at Index ' + index
+
+        p Array of objects
+        h1 Each Loop
+        -const persons = [{name: 'Ryu', age: 45}, {name: 'Shaun', age: 34}, {name: 'Mario', age: 67}];
+
+        h3 Persons List
+            each person in persons
+                p= 'person name: ' + person.name + ' age is: ' + person.age
+
+        p Object Iterator
+        - const person = {name: 'ryu', age: 34, email: 'ryu@gmail.com'}
+        each val, key in person
+            p= key + " - " + val
+
+        p each and for are same
+
+        for num in []
+            p= num
+        else
+            strong No input given
