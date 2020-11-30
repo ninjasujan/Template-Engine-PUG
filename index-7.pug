@@ -1,0 +1,15 @@
+html
+    head
+        title case statement PUG
+    body
+        - const orderStatus = 'pending'
+        case orderStatus
+            when 'ordered'
+                p your order has been received.
+            when 'pending'
+                p your order verification pending.
+            when 'cancelled'
+                p your order has been cancelled due to some issues.
+            default
+                p sorry.! we don't know what happend with your order.
+                
