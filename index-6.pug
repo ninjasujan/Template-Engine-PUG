@@ -1,0 +1,17 @@
+html
+    head
+        title Conditional Statement in Pug
+    body
+        h2 IF/ELSE
+        - const user = {name: 'sujan', loggedIn: false, lastlogin: 6}
+        if user.loggedIn
+            p
+                | welcome back
+                strong #{user.name}
+        else if user.lastlogin >= 6
+            p
+                strong your last login was #{user.lastlogin} seconds ago
+        else
+            a(href="login") login
+
+
