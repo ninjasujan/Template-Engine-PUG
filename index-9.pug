@@ -1,0 +1,21 @@
+
+mixin comment(commentData)
+    .comment
+        if commentData.authorComment
+            p comment made by author
+        .date #{commentData.date}
+        .author #{commentData.author}
+        .text #{commentData.text}
+html
+    head
+        title mixin pug
+        style. 
+            .comment {
+                font-family: 'sans serif';
+                line-height: 1.1em;
+            }
+    body
+        - const newComment = {authorComment: true, date: '12-02-2020', author: 'comment data', text: 'comment text'}
+        +comment(newComment)
+        +comment({authorComment: true, date: '12-02-2020', author: 'comment data', text: 'comment text'})
+          
